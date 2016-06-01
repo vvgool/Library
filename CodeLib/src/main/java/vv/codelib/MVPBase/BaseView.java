@@ -2,11 +2,6 @@ package vv.codelib.MVPBase;
 
 import android.content.Context;
 
-import com.trello.rxlifecycle.ActivityEvent;
-import com.trello.rxlifecycle.FragmentEvent;
-
-import rx.Observable;
-
 /**
  * Created by vvgool on 2016/5/23.
  */
@@ -31,9 +26,4 @@ public interface BaseView {
      */
     Context getViewContext();
 
-    <V> Observable.Transformer<V, V> bind();
-
-    <V> Observable.Transformer<V, V> bindUntil(FragmentEvent event);
-
-    <V> Observable.Transformer<V, V> bindUntil(ActivityEvent event);
 }
