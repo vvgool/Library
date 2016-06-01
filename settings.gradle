@@ -1,1 +1,1 @@
-include ':app', ':HttpLibrary', ':UtilsLibrary', ':vvtest', ':CodeLib'
+include ':app', ':HttpLibrary', ':UtilsLibrary', ':vvtest', ':CodeLib', ':WeightLibrary'
