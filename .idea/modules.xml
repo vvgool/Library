@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/HttpLibrary/HttpLibrary.iml" filepath="$PROJECT_DIR$/HttpLibrary/HttpLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/Library.iml" filepath="$PROJECT_DIR$/Library.iml" />
       <module fileurl="file://$PROJECT_DIR$/LoginLib/LoginLib.iml" filepath="$PROJECT_DIR$/LoginLib/LoginLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PayLib/PayLib.iml" filepath="$PROJECT_DIR$/PayLib/PayLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/UtilsLibrary/UtilsLibrary.iml" filepath="$PROJECT_DIR$/UtilsLibrary/UtilsLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/WeightLibrary/WeightLibrary.iml" filepath="$PROJECT_DIR$/WeightLibrary/WeightLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
