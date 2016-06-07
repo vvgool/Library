@@ -10,4 +10,10 @@ public class CommodityInfo {
     public String mBody;
     //商品价格
     public String mPrice;
+
+    public CommodityInfo(String mSubject, String mBody, String mPrice) {
+        this.mSubject = mSubject;
+        this.mBody = mBody;
+        this.mPrice = mPrice;
+    }
 }
