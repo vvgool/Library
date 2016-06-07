@@ -46,7 +46,8 @@
             android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
             android:configChanges="keyboardHidden|orientation"
             android:windowSoftInputMode="adjustResize"
-            android:exported="false" >
+            android:exported="false"
+            android:theme="@style/Theme.UMDefault">
         </activity>
 
         <!-- ###################添加UmengAppkey###################### -->
