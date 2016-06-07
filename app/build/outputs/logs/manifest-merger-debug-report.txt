@@ -1,39 +1,39 @@
 -- Merging decision tree log ---
 manifest
-ADDED from AndroidManifest.xml:1:1
-	xmlns:android
-		ADDED from AndroidManifest.xml:1:11
+ADDED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml:1:1-12:12
 	package
-		ADDED from AndroidManifest.xml:2:11
-		INJECTED from AndroidManifest.xml:0:0
-		INJECTED from AndroidManifest.xml:0:0
+		ADDED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml:2:11-35
+		INJECTED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml
+		INJECTED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from AndroidManifest.xml:0:0
-		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml
+		INJECTED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml:1:11-69
 	android:versionCode
-		INJECTED from AndroidManifest.xml:0:0
-		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml
+		INJECTED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml
 application
-ADDED from AndroidManifest.xml:4:5
-MERGED from com.android.support:appcompat-v7:23.1.1:22:5
-MERGED from com.android.support:support-v4:23.1.1:22:5
-	android:supportsRtl
-		ADDED from AndroidManifest.xml:7:18
+ADDED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml:4:5-10:19
+MERGED from [com.android.support:appcompat-v7:23.1.1] /home/vvgool/Project/Library/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /home/vvgool/Project/Library/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from AndroidManifest.xml:5:18
+		ADDED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml:5:18-50
+	android:supportsRtl
+		ADDED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml:7:18-44
 	android:allowBackup
-		ADDED from AndroidManifest.xml:4:18
+		ADDED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml:4:18-44
 	android:icon
-		ADDED from AndroidManifest.xml:6:18
+		ADDED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml:6:18-52
 	android:theme
-		ADDED from AndroidManifest.xml:8:18
+		ADDED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml:8:18-49
 uses-sdk
-INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
-MERGED from com.android.support:appcompat-v7:23.1.1:20:5
-MERGED from com.android.support:support-v4:23.1.1:20:5
+INJECTED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:23.1.1] /home/vvgool/Project/Library/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /home/vvgool/Project/Library/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
-		INJECTED from AndroidManifest.xml:0:0
-		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml
+		INJECTED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from AndroidManifest.xml:0:0
-		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml
+		INJECTED from /home/vvgool/Project/Library/app/src/main/AndroidManifest.xml

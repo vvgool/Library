@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="debug"><source path="E:\Library\VVLibrary\HttpLibrary\build\intermediates\bundles\debug\res"/></dataSet><dataSet config="main"><source path="E:\Library\VVLibrary\HttpLibrary\src\androidTest\res"/><source path="E:\Library\VVLibrary\HttpLibrary\build\generated\res\rs\androidTest\debug"/><source path="E:\Library\VVLibrary\HttpLibrary\build\generated\res\generated\androidTest\debug"/></dataSet><mergedItems/></merger>
