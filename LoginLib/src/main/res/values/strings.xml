@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LoginLib</string>
+    <string name="user_name">用户名:</string>
+    <string name="login">登录</string>
+    <string name="password">密码:</string>
+    <string name="action_sign_in_short">密码安全度过低，请输入较长密码！</string>
+    <string name="login_by_others">第三方用户登录</string>
+</resources>

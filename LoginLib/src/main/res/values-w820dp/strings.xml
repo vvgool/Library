@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="password">密码：</string>
+    <string name="action_sign_in_short">密码安全度过低，请输入较长密码！</string>
+    <string name="login_by_others">第三方用户登录</string>
+</resources>
