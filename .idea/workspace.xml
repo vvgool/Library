@@ -16,38 +16,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1d19aea-0c01-4d62-a228-acc8a23ff6b5" name="Default" comment="add imi">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SocialSDK_Sina.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SocialSDK_WeiXin_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SocialSDK_WeiXin_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_23_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/design_23_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_23_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/umeng_social_sdk.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/weiboSDKCore_3_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WeightLibrary/src/main/java/vv/weight/dialog/ProgressDialogUtils.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/LoginLib/jniLibs/jniLibs .exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/LoginLib/libs/libs .exe" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HttpLibrary/build/intermediates/bundles/debug/classes.jar" afterPath="$PROJECT_DIR$/HttpLibrary/build/intermediates/bundles/debug/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HttpLibrary/build/outputs/aar/HttpLibrary-debug.aar" afterPath="$PROJECT_DIR$/HttpLibrary/build/outputs/aar/HttpLibrary-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UtilsLibrary/build/intermediates/bundles/debug/classes.jar" afterPath="$PROJECT_DIR$/UtilsLibrary/build/intermediates/bundles/debug/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UtilsLibrary/build/outputs/aar/UtilsLibrary-debug.aar" afterPath="$PROJECT_DIR$/UtilsLibrary/build/outputs/aar/UtilsLibrary-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WeightLibrary/build/intermediates/bundles/debug/classes.jar" afterPath="$PROJECT_DIR$/WeightLibrary/build/intermediates/bundles/debug/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WeightLibrary/build/outputs/aar/WeightLibrary-debug.aar" afterPath="$PROJECT_DIR$/WeightLibrary/build/outputs/aar/WeightLibrary-debug.aar" />
+    <list default="true" id="d1d19aea-0c01-4d62-a228-acc8a23ff6b5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CodeLib/CodeLib.iml" afterPath="$PROJECT_DIR$/CodeLib/CodeLib.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoginLib/LoginLib.iml" afterPath="$PROJECT_DIR$/LoginLib/LoginLib.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoginLib/build.gradle" afterPath="$PROJECT_DIR$/LoginLib/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoginLib/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/LoginLib/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoginLib/src/main/java/vv/loginlib/LoginActivity.java" afterPath="$PROJECT_DIR$/LoginLib/src/main/java/vv/loginlib/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoginLib/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/LoginLib/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WeightLibrary/WeightLibrary.iml" afterPath="$PROJECT_DIR$/WeightLibrary/WeightLibrary.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vvtest/vvtest.iml" afterPath="$PROJECT_DIR$/vvtest/vvtest.iml" />
     </list>
     <ignored path="VVLibrary.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -6681,7 +6651,13 @@
       <option name="project" value="LOCAL" />
       <updated>1465268002687</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add imi">
+      <created>1465279179077</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1465279179077</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
