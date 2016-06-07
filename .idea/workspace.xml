@@ -17,17 +17,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1d19aea-0c01-4d62-a228-acc8a23ff6b5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/H5PayActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/utils/CommodityInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/utils/MerchantInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoginLib/LoginLib.iml" afterPath="$PROJECT_DIR$/LoginLib/LoginLib.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/PayActivity.java" afterPath="$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/PayActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UtilsLibrary/UtilsLibrary.iml" afterPath="$PROJECT_DIR$/UtilsLibrary/UtilsLibrary.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WeightLibrary/WeightLibrary.iml" afterPath="$PROJECT_DIR$/WeightLibrary/WeightLibrary.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PayLib/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/PayLib/src/main/AndroidManifest.xml" />
     </list>
     <ignored path="VVLibrary.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,32 +77,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="H5PayActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/H5PayActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.373913">
-              <caret line="145" column="55" selection-start-line="145" selection-start-column="55" selection-end-line="145" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2284#2522#0" expanded="true" />
-                <element signature="e#2521#2522#0" expanded="true" />
-                <element signature="e#3477#3478#0" expanded="true" />
-                <element signature="e#3507#3508#0" expanded="true" />
-                <element signature="e#4117#4376#0" expanded="true" />
-                <element signature="e#4375#4376#0" expanded="true" />
-                <element signature="e#4410#4806#0" expanded="true" />
-                <element signature="e#4805#4806#0" expanded="true" />
-                <element signature="e#4969#5409#0" expanded="true" />
-                <element signature="e#5408#5409#0" expanded="true" />
-                <element signature="e#5443#5689#0" expanded="true" />
-                <element signature="e#5688#5689#0" expanded="true" />
-                <element signature="e#5768#5991#0" expanded="true" />
-                <element signature="e#5990#5991#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CommodityInfo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/utils/CommodityInfo.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -132,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PayLib/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.2209302">
+              <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -6791,13 +6756,13 @@
         <option value="$PROJECT_DIR$/LoginLib/build.gradle" />
         <option value="$PROJECT_DIR$/WeightLibrary/src/main/java/vv/weight/dialog/ProgressDialogUtils.java" />
         <option value="$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/TestActivity.java" />
-        <option value="$PROJECT_DIR$/PayLib/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/LoginLib/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/Base64.java" />
         <option value="$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/utils/CommodityInfo.java" />
         <option value="$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/utils/MerchantInfo.java" />
         <option value="$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/PayActivity.java" />
         <option value="$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/H5PayActivity.java" />
+        <option value="$PROJECT_DIR$/PayLib/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -7623,7 +7588,13 @@
       <option name="project" value="LOCAL" />
       <updated>1465294825117</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add payLib">
+      <created>1465309216166</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1465309216166</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -7765,6 +7736,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.055263158">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -7779,6 +7751,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="98" selection-start-line="0" selection-start-column="98" selection-end-line="0" selection-end-column="98" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -7835,6 +7808,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -7996,14 +7970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PayLib/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/utils/Base64.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.0078745">
@@ -8051,26 +8017,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/PayActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="142" column="36" selection-start-line="142" selection-start-column="36" selection-end-line="142" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1373#1615#0" expanded="true" />
-            <element signature="e#1614#1615#0" expanded="true" />
-            <element signature="e#2246#2673#0" expanded="true" />
-            <element signature="e#2672#2673#0" expanded="true" />
-            <element signature="e#7908#7909#0" expanded="true" />
-            <element signature="e#7950#7951#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/H5PayActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.373913">
-          <caret line="145" column="55" selection-start-line="145" selection-start-column="55" selection-end-line="145" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.22391304">
+          <caret line="180" column="31" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2284#2522#0" expanded="true" />
@@ -8088,6 +8038,30 @@
             <element signature="e#5768#5991#0" expanded="true" />
             <element signature="e#5990#5991#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PayLib/src/main/java/com/vv/paylib/PayActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="142" column="36" selection-start-line="142" selection-start-column="36" selection-end-line="142" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1373#1615#0" expanded="true" />
+            <element signature="e#1614#1615#0" expanded="true" />
+            <element signature="e#2246#2673#0" expanded="true" />
+            <element signature="e#2672#2673#0" expanded="true" />
+            <element signature="e#7908#7909#0" expanded="true" />
+            <element signature="e#7950#7951#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PayLib/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2209302">
+          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
