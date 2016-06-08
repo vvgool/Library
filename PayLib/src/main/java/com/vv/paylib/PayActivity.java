@@ -20,15 +20,21 @@ import java.util.Locale;
 import java.util.Random;
 
 import rx.Observable;
-import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action0;
+import rx.functions.Action1;
+import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 import vv.codelib.NormalBase.NormalBaseActivity;
-
+/**
+ *@Desc {封装使用alipay sdk 的通用activity}
+ *@Author Wiesen Wang
+ *@Email vv_gool@163.com
+ *@Time  16-6-8
+ */
 public abstract class PayActivity extends NormalBaseActivity {
 
-
+    // 支付宝公钥
+    public static final String RSA_PUBLIC = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDI6d306Q8fIfCOaTXyiUeJHkrIvYISRcc73s3vF1ZT7XN8RNPwJxo8pWaJMmvyTn9N4HQ632qJBVHf8sxHi/fEsraprwCtzvzQETrNRwVxLO5jVmRGi60j8Ue1efIlzPXV9je9mkjzOmdssymZkh2QhUrCmZYI/FCEa3/cNMW0QIDAQAB";
 
 
     /**
@@ -68,37 +74,21 @@ public abstract class PayActivity extends NormalBaseActivity {
          * 完整的符合支付宝参数规范的订单信息
          */
         final String payInfo = orderInfo + "&sign=\"" + sign + "\"&" + getSignType();
-        Observable.create(new Observable.OnSubscribe<String>() {
-            @Override
-            public void call(Subscriber<? super String> subscriber) {
-                // 构造PayTask 对象
-                PayTask alipay = new PayTask(PayActivity.this);
-                // 调用支付接口，获取支付结果
-                String result = alipay.pay(payInfo, true);
-                subscriber.onNext(result);
-                subscriber.onCompleted();
-            }
-        }).subscribeOn(Schedulers.newThread())
-                .doOnSubscribe(new Action0() {
+        Observable.just(payInfo)
+                .flatMap(new Func1<String, Observable<String>>() {
                     @Override
-                    public void call() {
-
+                    public Observable<String> call(String s) {
+                        // 构造PayTask 对象
+                        PayTask alipay = new PayTask(PayActivity.this);
+                        // 调用支付接口，获取支付结果
+                        String result = alipay.pay(s, true);
+                        return Observable.just(result);
                     }
-                }).subscribeOn(AndroidSchedulers.mainThread())
+                }).subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<String>() {
+                .subscribe(new Action1<String>() {
                     @Override
-                    public void onCompleted() {
-
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-
-                    }
-
-                    @Override
-                    public void onNext(String s) {
+                    public void call(String s) {
                         PayResult payResult = new PayResult(s);
                         /**
                          * 同步返回的结果必须放置到服务端进行验证（验证的规则请看https://doc.open.alipay.com/doc2/
@@ -110,7 +100,7 @@ public abstract class PayActivity extends NormalBaseActivity {
                         String resultStatus = payResult.getResultStatus();
                         // 判断resultStatus 为“9000”则代表支付成功，具体状态码代表含义可参考接口文档
                         if (TextUtils.equals(resultStatus, "9000")) {
-                               showToast("支付成功");
+                            showToast("支付成功");
                         } else {
                             // 判断resultStatus 为非"9000"则代表可能支付失败
                             // "8000"代表支付结果因为支付渠道原因或者系统原因还在等待支付结果确认，最终交易是否成功以服务端异步通知为准（小概率状态）
@@ -125,7 +115,6 @@ public abstract class PayActivity extends NormalBaseActivity {
                         }
                     }
                 });
-        
     }
 
     /**

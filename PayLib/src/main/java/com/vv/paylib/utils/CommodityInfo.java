@@ -1,7 +1,9 @@
 package com.vv.paylib.utils;
-
 /**
- * Created by vvgool on 16-6-7.
+ *@Desc {商品信息}
+ *@Author Wiesen Wang
+ *@Email vv_gool@163.com
+ *@Time  16-6-8
  */
 public class CommodityInfo {
     //商品名称

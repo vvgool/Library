@@ -6,13 +6,10 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
-import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.LinearLayout;
 
 import com.alipay.sdk.app.PayTask;
 import com.alipay.sdk.util.H5PayResultModel;
@@ -37,16 +34,7 @@ public class H5PayActivity extends Activity {
         super.onCreate(savedInstanceState);
         initData();
         super.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        LinearLayout layout = new LinearLayout(getApplicationContext());
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams
-                (ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT);
-        layout.setOrientation(LinearLayout.VERTICAL);
-        setContentView(layout, params);
-
-        mWebView = new WebView(getApplicationContext());
-        params.weight = 1;
-        mWebView.setVisibility(View.VISIBLE);
-        layout.addView(mWebView, params);
+        setContentView(R.layout.activity_h5_pay);
         initWebView();
 
     }
@@ -89,16 +77,13 @@ public class H5PayActivity extends Activity {
      * 初始化webview控件
      */
     private void initWebView(){
+        mWebView = (WebView) findViewById(R.id.wv_pay);
         WebSettings settings = mWebView.getSettings();
-        settings.setRenderPriority(WebSettings.RenderPriority.HIGH);
         settings.setSupportMultipleWindows(true);
         settings.setJavaScriptEnabled(true);
-        settings.setSavePassword(false);
         settings.setJavaScriptCanOpenWindowsAutomatically(true);
         settings.setMinimumFontSize(settings.getMinimumFontSize() + 8);
         settings.setAllowFileAccess(false);
-        settings.setTextSize(WebSettings.TextSize.NORMAL);
-        mWebView.setVerticalScrollbarOverlay(true);
         mWebView.setWebViewClient(new MyWebViewClient());
         mWebView.loadUrl(mUrl);
     }
