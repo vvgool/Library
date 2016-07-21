@@ -6,115 +6,20 @@ import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.Rect;
-import android.util.TypedValue;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.RelativeLayout;
 
 /**
  * Some method help do some UI works
  */
 public class BasicUiUtils {
-    /**
-     * Hide soft keyboard method.
-     *
-     * @param context
-     * @param activity
-     */
-    public static void hiddenKeyboard(Context context, Activity activity) {
-        try {
-            InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
 
-            if (activity.getCurrentFocus() != null) {
-                if (activity.getCurrentFocus().getWindowToken() != null) {
-                    imm.hideSoftInputFromWindow(activity
-                                    .getCurrentFocus().getWindowToken(),
-                            InputMethodManager.HIDE_NOT_ALWAYS);
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
-    }
 
-    /**
-     * Hide soft keyboard by click。
-     *
-     * @param context
-     * @param activity
-     * @param motionEvent Judge by motion event
-     */
-    public static void hiddenKeyBoardByClick(Context context, Activity activity, MotionEvent motionEvent) {
-        if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-            BasicUiUtils.hiddenKeyboard(context, activity);
-        }
-    }
-
-    /**
-     * Converte dp to pixels
-     *
-     * @param context
-     * @param dpValue
-     * @return pixels
-     */
-    public static int dip2px(Context context, float dpValue) {
-        return (int) Math.ceil(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpValue, context.getResources().getDisplayMetrics()));
-    }
-
-    /**
-     * Converting pixels to dp
-     *
-     * @param context
-     * @param pxValue
-     * @return dp
-     */
-    public static int px2dip(Context context, float pxValue) {
-        final float scale = context.getResources().getDisplayMetrics().density;
-        return (int) (pxValue / scale + 0.5f);
-    }
-
-    /**
-     * Converte dp to pixels
-     *
-     * @param context
-     * @param dpValue
-     * @return pixels
-     */
-    public static float dp2px(Context context, float dpValue) {
-        float scale = context.getResources().getDisplayMetrics().density;
-        return (int) Math.ceil(dpValue * scale);
-    }
-    /**
-     * 将px值转换为sp值，保证文字大小不变
-     *
-     * @param context
-     * @param pxValue
-     *            （DisplayMetrics类中属性scaledDensity）
-     * @return
-     */
-    public static int px2sp(Context context, float pxValue) {
-        final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
-        return (int) (pxValue / fontScale + 0.5f);
-    }
-
-    /**
-     * 将sp值转换为px值，保证文字大小不变
-     *
-     * @param context
-     * @param spValue
-     *            （DisplayMetrics类中属性scaledDensity）
-     * @return
-     */
-    public static int sp2px(Context context, float spValue) {
-        final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
-        return (int) (spValue * fontScale + 0.5f);
-    }
     /**
      * Expand a view which has already collapsed
      *

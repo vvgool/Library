@@ -1,15 +1,19 @@
 package vv.library.systemUtils;
 
+import android.app.Activity;
 import android.content.Context;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 import java.util.Timer;
 import java.util.TimerTask;
-
 /**
- * Created by vvgool on 16-6-2.
+ *@Desc {软件盘管理类}
+ *@Author Wiesen Wang
+ *@Email vv_gool@163.com
+ *@Time  16-6-12
  */
 public class KeyboardUtils {
     //隐藏虚拟键盘
@@ -70,5 +74,41 @@ public class KeyboardUtils {
         }
         return bool;
 
+    }
+
+    /**
+     * Hide soft keyboard method.
+     *
+     * @param context
+     * @param activity
+     */
+    public static void hiddenKeyboard(Context context, Activity activity) {
+        try {
+            InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+
+            if (activity.getCurrentFocus() != null) {
+                if (activity.getCurrentFocus().getWindowToken() != null) {
+                    imm.hideSoftInputFromWindow(activity
+                                    .getCurrentFocus().getWindowToken(),
+                            InputMethodManager.HIDE_NOT_ALWAYS);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    /**
+     * Hide soft keyboard by click。
+     *
+     * @param context
+     * @param activity
+     * @param motionEvent Judge by motion event
+     */
+    public static void hiddenKeyBoardByClick(Context context, Activity activity, MotionEvent motionEvent) {
+        if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+            KeyboardUtils.hiddenKeyboard(context, activity);
+        }
     }
 }

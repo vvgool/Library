@@ -1,0 +1,7 @@
+attribute vec4 aPosition ; //put vertex pointers
+attribute vec4 aColor;   //put vertex pointer colors
+varying vec4 vColor;   //put color to fragment shader
+void main(){
+    gl_Position = aPosition;
+    vColor = aColor;
+}

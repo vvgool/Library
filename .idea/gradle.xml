@@ -12,6 +12,8 @@
             <option value="$PROJECT_DIR$/CodeLib" />
             <option value="$PROJECT_DIR$/HttpLibrary" />
             <option value="$PROJECT_DIR$/LoginLib" />
+            <option value="$PROJECT_DIR$/MediaLib" />
+            <option value="$PROJECT_DIR$/OpenGlLib" />
             <option value="$PROJECT_DIR$/PayLib" />
             <option value="$PROJECT_DIR$/UtilsLibrary" />
             <option value="$PROJECT_DIR$/WeightLibrary" />
@@ -25,6 +27,8 @@
             <option value="$PROJECT_DIR$/CodeLib" />
             <option value="$PROJECT_DIR$/HttpLibrary" />
             <option value="$PROJECT_DIR$/LoginLib" />
+            <option value="$PROJECT_DIR$/MediaLib" />
+            <option value="$PROJECT_DIR$/OpenGlLib" />
             <option value="$PROJECT_DIR$/PayLib" />
             <option value="$PROJECT_DIR$/UtilsLibrary" />
             <option value="$PROJECT_DIR$/WeightLibrary" />

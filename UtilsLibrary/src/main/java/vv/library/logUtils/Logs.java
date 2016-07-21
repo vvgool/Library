@@ -3,12 +3,12 @@ package vv.library.logUtils;
 import android.util.Log;
 
 /**
- * Created by ljdy on 2016/4/15.
+ * Created by weisen on 2016/4/15.
  */
 public class Logs {
     private static boolean sIsLogEnabled = true;
 
-    private static String sApplicationTag = "Chen";
+    private static String sApplicationTag = "Wiesen";
 
     private static final String TAG_CONTENT_PRINT = "%s:%s.%s:%d";
 

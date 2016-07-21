@@ -9,17 +9,13 @@ import android.content.Context;
 public class ProgressDialogUtils {
 
     private ProgressDialog mProgressDialog;
-    private static ProgressDialogUtils mProgressDialogUtils;
+
+    private static class InstanceHolder{
+        private static ProgressDialogUtils mInstance = new ProgressDialogUtils();
+    }
 
     public static ProgressDialogUtils getInstance(){
-        if (mProgressDialogUtils == null){
-            synchronized (ProgressDialogUtils.class){
-                if (mProgressDialogUtils == null){
-                    mProgressDialogUtils = new ProgressDialogUtils();
-                }
-            }
-        }
-        return mProgressDialogUtils;
+        return InstanceHolder.mInstance;
     }
 
     public ProgressDialogUtils createProgressDialog(Context context){
