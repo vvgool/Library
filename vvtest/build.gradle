@@ -27,4 +27,5 @@ dependencies {
     compile 'com.android.support:design:23.3.0'
     compile project(':OpenGlLib')
     compile project(':MediaLib')
+    compile project(':WeightLibrary')
 }

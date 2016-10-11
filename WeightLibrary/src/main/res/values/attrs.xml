@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="TextColor" format="color|reference"/>
+    <attr name="TextSize" format="dimension"/>
+    <attr name="TextBackground" format="reference|color"/>
+    <declare-styleable name="MenuBar" >
+        <attr name="ChildWidth" format="dimension"/>
+        <attr name="ChildHeight" format="dimension"/>
+        <attr name="ChildIntervalSize" format="dimension"/>
+        <attr name="ChildIntervalColor" format="color|reference"/>
+        <attr name="Orientation" >
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+        <attr name="TextBackground"/>
+        <attr name="TextColor"/>
+        <attr name="TextSize"/>
+    </declare-styleable>
+
+</resources>

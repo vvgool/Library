@@ -105,7 +105,7 @@ public class MapViewGL extends GL20DrawBase implements GLSurfaceView.Renderer,ID
         GLES20.glClearColor(163,156,158,255);
         mGL20Factory.useProgram();
         MatrixState.setInitStack();
-        MatrixState.transtate(mScreenPosition.getMoveX(mMoveX),mScreenPosition.getMoveY(mMoveY),0);
+        MatrixState.translate(mScreenPosition.getMoveX(mMoveX),mScreenPosition.getMoveY(mMoveY),0);
         MatrixState.scale(mScale,mScale,0);
         //将最终变换矩阵传入shader程序
         GLES20.glUniformMatrix4fv(muMVPMatrixHandle, 1, false, MatrixState.getFinalMatrixMM(), 0);
@@ -138,7 +138,7 @@ public class MapViewGL extends GL20DrawBase implements GLSurfaceView.Renderer,ID
         mLayerDrawable.onLayerSizeChanged(width,height);
         GLES20.glViewport(0,0,width,height);
         float ratio = (float)width/(float)height;
-        MatrixState.setPrjectOrthoM(-ratio,ratio,-1,1,1,10);
+        MatrixState.setProjectOrthoM(-ratio,ratio,-1,1,1,10);
         loadMap();
 //        mTextureID = GL20TextureUtils.loadTexture(mLayerDrawable.getBitmap());
         initBuf(width,height);
@@ -157,6 +157,11 @@ public class MapViewGL extends GL20DrawBase implements GLSurfaceView.Renderer,ID
         GLES20.glGenTextures(1, textureIds, 0);
         // 将绑定纹理(texuture[0]表示指针指向纹理数据的初始位置)
         mTextureID = textureIds[0];
+        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, mTextureID);
+        GLES20.glTexParameterf(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_MIN_FILTER,
+                GLES20.GL_NEAREST);
+        GLES20.glTexParameterf(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_MAG_FILTER,
+                GLES20.GL_NEAREST);
     }
 
     public LayerDrawable getLayerDrawable(){
@@ -208,30 +213,43 @@ public class MapViewGL extends GL20DrawBase implements GLSurfaceView.Renderer,ID
     }
 
     public void freshTexture(){
-        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, mTextureID);
-        GLES20.glTexParameterf(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_MIN_FILTER,
-                GLES20.GL_NEAREST);
-        GLES20.glTexParameterf(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_MAG_FILTER,
-                GLES20.GL_NEAREST);
-        GLUtils.texImage2D(GLES20.GL_TEXTURE_2D,0,mLayerDrawable.getBitmap(),0);
+
         onFreshView();
 
     }
 
+    private Runnable mFreshRunnable = new Runnable() {
+        @Override
+        public void run() {
+            GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, mTextureID);
+            GLUtils.texImage2D(GLES20.GL_TEXTURE_2D,0,mLayerDrawable.getBitmap(),0);
+        }
+    };
+
     public void onFreshView(){
         if (mRequestRenderFresh != null){
-            mRequestRenderFresh.onFresh();
+            mRequestRenderFresh.onFresh(mFreshRunnable);
         }
     }
 
     @Override
     public void zoomIn() {
-
+        int level = mDeuMapStatus.getCurrentZoom();
+        if (level < DeuMapConstants.MAX_ZOOM){
+            mDeuMapStatus.setZoomLevel(++level);
+            freshMapCenterPoint();
+            loadMap();
+        }
     }
 
     @Override
     public void zoomOut() {
-
+        int level = mDeuMapStatus.getCurrentZoom();
+        if (level > DeuMapConstants.MIN_ZOOM){
+            mDeuMapStatus.setZoomLevel(--level);
+            freshMapCenterPoint();
+            loadMap();
+        }
     }
 
     @Override
@@ -243,6 +261,7 @@ public class MapViewGL extends GL20DrawBase implements GLSurfaceView.Renderer,ID
     public void setZoomLevel(int zoomLevel) {
         mDeuMapStatus.setZoomLevel(zoomLevel);
         freshMapCenterPoint();
+        loadMap();
     }
 
     @Override
@@ -419,6 +438,6 @@ public class MapViewGL extends GL20DrawBase implements GLSurfaceView.Renderer,ID
 
 
     public interface RequestRenderFresh{
-        void onFresh();
+        void onFresh(Runnable runnable);
     }
 }

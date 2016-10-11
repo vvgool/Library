@@ -7,7 +7,13 @@ import android.opengl.GLES20;
  */
 public class GL20ProgramUtils {
 
-
+    /**
+     * 创建Program
+     * @param vertexShader 创建的vertexShader 返回的id
+     * @param fragmentShader 创建的fragmentShader 返回的id
+     * @return 创建的program 返回的id
+     * @throws Exception
+     */
     public int createProgram(int vertexShader,int fragmentShader) throws Exception{
         // 创建一个空的OpenGL ES Program
         int  program = GLES20.glCreateProgram();

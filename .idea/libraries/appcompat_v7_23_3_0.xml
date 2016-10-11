@@ -2,8 +2,8 @@
   <library name="appcompat-v7-23.3.0">
     <ANNOTATIONS>
       <root url="jar://$PROJECT_DIR$/CodeLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/annotations.zip!/" />
-      <root url="jar://$PROJECT_DIR$/CodeLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/annotations.zip!/" />
-      <root url="jar://$PROJECT_DIR$/CodeLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/LoginLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/PayLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/CodeLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res" />

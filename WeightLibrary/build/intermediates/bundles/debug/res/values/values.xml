@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr format="reference|color" name="TextBackground"/>
+    <attr format="color|reference" name="TextColor"/>
+    <attr format="dimension" name="TextSize"/>
+    <declare-styleable name="MenuBar"><attr format="dimension" name="ChildWidth"/><attr format="dimension" name="ChildHeight"/><attr format="dimension" name="ChildIntervalSize"/><attr format="color|reference" name="ChildIntervalColor"/><attr name="Orientation">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr><attr name="TextBackground"/><attr name="TextColor"/><attr name="TextSize"/></declare-styleable>
     <string name="app_name">WeightLibrary</string>
 </resources>

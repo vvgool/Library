@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 //        Bitmap bitmap=ThumbnailUtils.extractThumbnail(PictureEffect.createOldEffectStyle
 //                (BitmapFactory.decodeResource(getResources(),R.drawable.pic)),100,100);
 //        mImageThumbnail.setImageBitmap(bitmap);
-        initView();
+//        initView();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,9 +42,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView(){
-        myGlSurfaceView = (MyGlSurfaceView) findViewById(R.id.sv_map);
-        mImageView = (ImageView) findViewById(R.id.im_test);
-        myGlSurfaceView.setImage(mImageView);
+//        myGlSurfaceView = (MyGlSurfaceView) findViewById(R.id.sv_map);
+//        mImageView = (ImageView) findViewById(R.id.im_test);
+//        myGlSurfaceView.setImage(mImageView);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

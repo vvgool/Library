@@ -50,7 +50,10 @@ public class MapDrawable {
      * @param bitmap which you want to draw bitmap
      */
     public void loadSingleDrawable(int x,int y,Bitmap bitmap){
-        mMapCanvas.drawBitmap(bitmap==null?mDefaultBitmap:bitmap,x*MAP_SIZE,y*MAP_SIZE,null);
+        mMapCanvas.drawBitmap(mDefaultBitmap,x*MAP_SIZE,y*MAP_SIZE,null);
+        if (bitmap != null){
+            mMapCanvas.drawBitmap(bitmap,x*MAP_SIZE,y*MAP_SIZE,null);
+        }
     }
 
     /**

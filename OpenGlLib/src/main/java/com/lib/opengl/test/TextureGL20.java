@@ -135,7 +135,7 @@ public class TextureGL20 extends GL20DrawBase implements GLSurfaceView.Renderer{
         //设置屏幕背景色RGBA
         GLES20.glClearColor(0.5f,0.5f,0.5f, 1.0f);
         float ratio =(float) width / (float) height;
-        MatrixState.setPrjectOrthoM(-ratio,ratio,-1,1,1,4);
+        MatrixState.setProjectOrthoM(-ratio,ratio,-1,1,1,4);
         //调用此方法产生摄像机9参数位置矩阵
 //        MatrixState.setCamera(0,0,2,0f,0f,0f,0f,1.0f,0f);
         initBuf();

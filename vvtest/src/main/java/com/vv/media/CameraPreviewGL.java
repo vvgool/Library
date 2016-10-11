@@ -25,23 +25,28 @@ import javax.microedition.khronos.opengles.GL10;
 public class CameraPreviewGL extends GLSurfaceView {
     private Context mContext;
     private SurfaceTexture mSurfaceTexture;
-
+    private CameraRender mCameraRender;
     public CameraPreviewGL(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
         setEGLContextClientVersion(2);
-        CameraRender cameraRender = new CameraRender();
-        setRenderer(cameraRender);
-        setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
+        mCameraRender = new CameraRender();
+        setRenderer(mCameraRender);
+        setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
+
+    }
+
+    public void onDestroy(){
+        mCameraRender.onDestroy();
     }
 
     private class CameraRender extends GL20DrawBase implements Renderer, SurfaceTexture.OnFrameAvailableListener, CameraUtils.SurfaceLoading {
         private GL20ScreenPosition mScreenPosition;
         private float[] mTextureCoods={
-                0,0,
                 0,1,
-                1,0,
-                1,1
+                1,1,
+                0,0,
+                1,0
         };
         private float[] mVertices ={
                 -1f,1f,0,
@@ -60,7 +65,7 @@ public class CameraPreviewGL extends GLSurfaceView {
         @Override
         protected void onCreateProgram() {
             try {
-                String vertexStr = GL20ShaderUtils.loadFromAssetsFile("texture_vertex.txt",mContext.getResources());
+                String vertexStr = GL20ShaderUtils.loadFromAssetsFile("camera_vertex.txt",mContext.getResources());
                 String fragmentStr = GL20ShaderUtils.loadFromAssetsFile("camera_frag.txt",mContext.getResources());
                 mGL20Factory.createShader(new GL20ShaderUtils(vertexStr,fragmentStr))
                         .createProgram();
@@ -118,7 +123,7 @@ public class CameraPreviewGL extends GLSurfaceView {
             //设置屏幕背景色RGBA
             GLES20.glClearColor(0.5f,0.5f,0.5f, 1.0f);
             float ratio =(float) width / (float) height;
-            MatrixState.setPrjectOrthoM(-ratio,ratio,-1,1,1,4);
+            MatrixState.setProjectOrthoM(-ratio,ratio,-1,1,1,4);
             //调用此方法产生摄像机9参数位置矩阵
 //        MatrixState.setCamera(0,0,2,0f,0f,0f,0f,1.0f,0f);
             initBuf();
@@ -143,7 +148,8 @@ public class CameraPreviewGL extends GLSurfaceView {
                     GLES20.GL_TEXTURE_WRAP_S, GLES20.GL_CLAMP_TO_EDGE);
             GLES20.glTexParameteri(GLES11Ext.GL_TEXTURE_EXTERNAL_OES,
                     GLES20.GL_TEXTURE_WRAP_T, GLES20.GL_CLAMP_TO_EDGE);
-            mSurfaceTexture = new SurfaceTexture(textures[0]);
+
+            mSurfaceTexture = new SurfaceTexture(mTextureID);
             mSurfaceTexture.setOnFrameAvailableListener(this);
         }
 
@@ -166,11 +172,18 @@ public class CameraPreviewGL extends GLSurfaceView {
 
         @Override
         public void onFrameAvailable(SurfaceTexture surfaceTexture) {
+//            surfaceTexture.updateTexImage();
+            requestRender();
         }
 
         @Override
         public Surface onSurfaceLoading() {
             return new Surface(mSurfaceTexture);
+        }
+
+        public void onDestroy(){
+            super.onDestroy();
+            mCameraUtils.closeCamera();
         }
     }
 }

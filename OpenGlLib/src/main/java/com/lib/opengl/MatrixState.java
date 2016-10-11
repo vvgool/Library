@@ -34,7 +34,7 @@ public class MatrixState {
 	}
 
 	//设置沿xyz轴移动
-	public static void transtate(float x,float y,float z) {
+	public static void translate(float x, float y, float z) {
 		Matrix.translateM(mMMatrix, 0, x, y, z);
 	}
 
@@ -92,7 +92,7 @@ public class MatrixState {
 	 * @param near near面距离
 	 * @param far far面距离
 	 */
-	public static void setPrjectOrthoM(float left, float right, float bottom, float top, float near, float far) {
+	public static void setProjectOrthoM(float left, float right, float bottom, float top, float near, float far) {
 
 		Matrix.orthoM(mProjMatrix, 0, left, right, bottom, top, near, far);
 

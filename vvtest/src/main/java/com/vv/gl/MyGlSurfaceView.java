@@ -55,7 +55,8 @@ public class MyGlSurfaceView extends GLSurfaceView implements MapViewGL.RequestR
     }
 
     @Override
-    public void onFresh() {
+    public void onFresh(Runnable runnable) {
+        queueEvent(runnable);
         requestRender();
         if (image!=null){
             ((Activity)mContext).runOnUiThread(new Runnable() {

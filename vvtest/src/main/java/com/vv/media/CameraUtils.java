@@ -27,6 +27,7 @@ public class CameraUtils {
     private static final String TAG = "Camera2";
     private final Handler mHandler;
     private CameraManager mCameraManager;
+    private CameraDevice mCameraDevice;
     private final Context mContext;
     private SurfaceLoading mSurfaceLoading;
 
@@ -70,6 +71,8 @@ public class CameraUtils {
     }
 
 
+
+
     private void openCamera(String id){
         if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
@@ -89,13 +92,21 @@ public class CameraUtils {
         }
     }
 
+
+    public void closeCamera(){
+        if (mCameraDevice != null){
+            mCameraDevice.close();
+        }
+    }
+
     private CaptureRequest.Builder mPreviewBuilder;
     private CameraDevice.StateCallback mCameraStateCallback = new CameraDevice.StateCallback() {
         @Override
         public void onOpened(CameraDevice camera) {
             try {
                 Log.i(TAG,"camera opened");
-                if (mSurfaceLoading != null) {
+                mCameraDevice = camera;
+                 if (mSurfaceLoading != null) {
                     mPreviewBuilder = camera.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
                     mPreviewBuilder.addTarget(mSurfaceLoading.onSurfaceLoading());
                     camera.createCaptureSession(Arrays.asList(mSurfaceLoading.onSurfaceLoading()), mCameraSessionCallback, mHandler);
