@@ -1,1 +1,1 @@
-include ':app', ':HttpLibrary', ':UtilsLibrary', ':vvtest', ':CodeLib', ':WeightLibrary', ':PayLib', ':OpenGlLib', ':MediaLib', 'LoginLib'
+include ':HttpLibrary', ':UtilsLibrary', ':vvtest', ':CodeLib', ':WeightLibrary', ':PayLib', ':OpenGlLib', ':MediaLib', 'LoginLib'
