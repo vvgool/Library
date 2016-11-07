@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CodeLib/CodeLib.iml" filepath="$PROJECT_DIR$/CodeLib/CodeLib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/HttpLibrary/HttpLibrary.iml" filepath="$PROJECT_DIR$/HttpLibrary/HttpLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/Library.iml" filepath="$PROJECT_DIR$/Library.iml" />
       <module fileurl="file://$PROJECT_DIR$/LoginLib/LoginLib.iml" filepath="$PROJECT_DIR$/LoginLib/LoginLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/MediaLib/MediaLib.iml" filepath="$PROJECT_DIR$/MediaLib/MediaLib.iml" />
