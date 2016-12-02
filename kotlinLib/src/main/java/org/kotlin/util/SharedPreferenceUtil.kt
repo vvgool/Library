@@ -11,7 +11,7 @@ class SharedPreferenceUtil {
         private val mSharedPreferenceUtil: SharedPreferenceUtil by lazy { SharedPreferenceUtil() }
         private  var mSharedPreferences:SharedPreferences? = null
 
-        fun createSharedPrePrefrence(sp:SharedPreferences): SharedPreferenceUtil {
+        fun createSharedPrePreference(sp:SharedPreferences): SharedPreferenceUtil {
             mSharedPreferences = sp
             return mSharedPreferenceUtil
         }
