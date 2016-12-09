@@ -16,5 +16,11 @@
         <attr name="TextColor"/>
         <attr name="TextSize"/>
     </declare-styleable>
-
+    <declare-styleable name="LabelView">
+        <attr name="label_background" format="color|reference"/>
+        <attr name="label_text_size" format="dimension|reference"/>
+        <attr name="label_text_color" format="color|reference"/>
+        <attr name="label_text_padding" format="dimension|reference"/>
+        <attr name="label_text" format="string|reference"/>
+    </declare-styleable>
 </resources>
